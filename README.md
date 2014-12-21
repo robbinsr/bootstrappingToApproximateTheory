@@ -1,0 +1,1 @@
+This repository contains code and output files (*.md, *.Rmd, *.html, *.pdf) for part 1 of a project for the course Statistical Inference in the Data Science specialization offered jointly by Johns Hopkins University and Coursera. Part 2 of 2 of the project is here: https://github.com/robbinsr/siProjPart2 .
