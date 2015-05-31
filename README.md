@@ -16,25 +16,10 @@ Theory, for this lambda, indicated it would be 0.7905694.
 Note that the distribution that was generated approximates the Gaussian distribution, which is what is expected when sample statistics are indeed unbiased estimators.
 
 
-```
-## Installing package into 'C:/Users/Russ/Documents/R/win-library/3.2'
-## (as 'lib' is unspecified)
-```
-
-```
-## package 'plotrix' successfully unpacked and MD5 sums checked
-## 
-## The downloaded binary packages are in
-## 	C:\Users\Russ\AppData\Local\Temp\Rtmp6pnC8M\downloaded_packages
-```
 
 
 
-![](README_files/figure-html/unnamed-chunk-1-1.png) 
-
-```
-## [1] "#"
-```
+![](README_files/figure-html/unnamed-chunk-2-1.png) 
 
 ##Appendix 
 
@@ -106,40 +91,20 @@ a_t<-data.frame(a_t)
 colnames(a_t)<-c("Theoretical","Empirical")
 rownames(a_t)<-c("Mean","SE")
 
-hist(a_h,breaks=20,col="light gray",prob=TRUE,main="Mean of Means Distributions, 
-     Means, and SEs",
-     xlab="Means of 1000 Samples of 40 Random Exponentials ") 
+hist(h,breaks=20,col="light gray",prob=TRUE,main="Mean of Means Distributions, Means, and SEs",xlab="Means of 1000 Samples of 40 Random Exponentials ") 
 lines(density(a_h),col="blue")
-legend("topright",legend=c("Gaussian Density", "Mean of Means Density", 
-                           "Theory Mean of Means", 
-                           "Empirical Mean of Means","1 Theory SE of Mean",
-                           "1 Empirical SE of 
-                           Mean"),lty=c(1,1,3,3,3,3),lwd=c(3,3,3,3,3,3),
-                            col=c("black","blue",
-                           "red", "blue","orange","green"),
-                            merge=TRUE,inset=.01,cex=.8,adj=0) 
-
+legend("topright",legend=c("Gaussian Density", "Mean of Means Density", "Theory Mean of Means", "Empirical Mean of Means","1 Theory SE of Mean", "1 Empirical SE of Mean"),lty=c(1,1,3,3,3,3),lwd=c(3,3,3,3,3,3), col=c("black","blue","red", "blue","orange","green"),merge=TRUE,inset=.01,cex=.8,adj=0) 
 a_xfit<-seq(min(a_h),max(a_h),length=40) 
     a_yfit<-dnorm(a_xfit,mean=mean(a_h),sd=sd(a_h))
 lines(a_xfit, a_yfit, col="black", lwd=2)
-abline(v=a_exp_mean_of_means,col="red", lwd=4, lty=3)
-abline(v=a_emp_mean_of_means,col="blue", lwd=3, lty=3)
-abline(v=a_exp_mean_of_means-exp_SE_of_means,col="orange", lwd=4, lty=3)
-abline(v=a_exp_mean_of_means+exp_SE_of_means,col="orange", lwd=4, lty=3)
-abline(v=a_emp_mean_of_means-emp_SE_of_means,col="green", lwd=3, lty=3)
-abline(v=a_emp_mean_of_means+emp_SE_of_means,col="green", lwd=3, lty=3)
+abline(v=exp_mean_of_means,col="red", lwd=4, lty=3)
+abline(v=emp_mean_of_means,col="blue", lwd=3, lty=3)
+abline(v=exp_mean_of_means-exp_SE_of_means,col="orange", lwd=4, lty=3)
+abline(v=exp_mean_of_means+exp_SE_of_means,col="orange", lwd=4, lty=3)
+abline(v=emp_mean_of_means-emp_SE_of_means,col="green", lwd=3, lty=3)
+abline(v=emp_mean_of_means+emp_SE_of_means,col="green", lwd=3, lty=3)
 ```
 
-![](README_files/figure-html/unnamed-chunk-5-1.png) 
-
-```r
-a_t
-```
-
-```
-##      Theoretical Empirical
-## Mean   5.0000000  4.991819
-## SE     0.7905694  0.746021
-```
+![](README_files/figure-html/unnamed-chunk-6-1.png) 
 
 Note: Code for this document is available at https://github.com/robbinsr/validatingRfunctionBehavior.
