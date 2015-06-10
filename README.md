@@ -1,5 +1,4 @@
-#Example: Validating an R function behaves as expected
-#### Author: Russ Robbins
+#Validating an R function behaves as expected
 
 ##Summary:
 
