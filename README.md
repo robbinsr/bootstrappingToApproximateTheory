@@ -1,4 +1,4 @@
-You are reading the README.md file in the validating GitHub repository, for Russ Robbins. This repository stores the files validating.html as well as validating.Rmd. Select the validating link above to view the files.
+You are reading the README.md file in the validating GitHub repository associated with Russ Robbins. This repository stores the files validating.html as well as validating.Rmd. Select the validating link above to view the files.
 
 Statistical theory indicates that sample statistics are unbiased estimators of the population parameters they seek to represent. The R programming language provides a built function named rexp(). The purpose of rexp() is to generate values for the theoretical exponential distribution.
 
